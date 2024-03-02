@@ -1,0 +1,42 @@
+{
+  "tables": [
+    {
+      "caching": "cache",
+      "name": "users",
+      "target_id": "3",
+      "columns": [
+        {
+          "name": "email",
+          "type": "custom:hello33@gmail.com"
+        },
+        {
+          "name": "last_name",
+          "type": "custom:Nicolas"
+        },
+        {
+          "name": "first_name",
+          "type": "firstname"
+        },
+        {
+          "name": "password",
+          "type": "password"
+        }
+      ],
+      "relations_tables": [
+        {
+          "name": "addresses",
+          "columns": [
+            {
+              "name": "address",
+              "type": "address_streetname"
+            },
+            {
+              "name": "address_number",
+              "type": "address_number"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

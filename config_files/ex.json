@@ -1,0 +1,42 @@
+{
+  "tables": [
+    {
+      "caching": "force-cache",
+      "name": "users",
+      "target_id": "5",
+      "columns": [
+        {
+          "name": "email",
+          "type": "custom:hellos@gmail.com"
+        },
+        {
+          "name": "last_name",
+          "type": "lastname"
+        },
+        {
+          "name": "first_name",
+          "type": "firstname"
+        }
+      ],
+      "relations_tables": [
+        {
+          "name": "addresses",
+          "columns": [
+            {
+              "name": "address",
+              "type": "address"
+            },
+            {
+              "name": "last_name",
+              "type": "lastname"
+            },
+            {
+              "name": "first_name",
+              "type": "custom:Alex"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

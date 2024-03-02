@@ -1,0 +1,102 @@
+{
+  "tables": [
+    {
+      "caching": "cache",
+      "name": "users",
+      "target_id": "4:8",
+      "columns": [
+        {
+          "name": "email",
+          "type": "email"
+        },
+        {
+          "name": "last_name",
+          "type": "lastname"
+        },
+        {
+          "name": "first_name",
+          "type": "firstname"
+        },
+        {
+          "name": "password",
+          "type": "password"
+        }
+      ],
+      "relations_tables": [
+        {
+          "name": "addresses",
+          "columns": [
+            {
+              "name": "address",
+              "type": "address_streetname"
+            },
+            {
+              "name": "address_number",
+              "type": "address_number"
+            },
+            {
+              "name": "zip_code",
+              "type": "address_zipcode"
+            },
+            {
+              "name": "city",
+              "type": "address_city"
+            },
+            {
+              "name": "country",
+              "type": "current_country"
+            },
+            {
+              "name": "last_name",
+              "type": "lastname"
+            },
+            {
+              "name": "first_name",
+              "type": "firstname"
+            }
+          ]
+        },
+        {
+          "name": "payment",
+          "relations_tables": [
+            {
+              "name": "payment_method",
+              "relations_tables": [
+                {
+                  "name": "sepa",
+                  "columns": [
+                    {
+                      "name": "iban",
+                      "type": "iban"
+                    },
+                    {
+                      "name": "bic",
+                      "type": "swift"
+                    }
+                  ]
+                },
+                {
+                  "name": "cb",
+                  "columns": [
+                    {
+                      "name": "cvc",
+                      "type": "card_cvc"
+                    },
+                    {
+                      "name": "code",
+                      "type": "card_number"
+                    },
+                    {
+                      "name": "date",
+                      "type": "card_expiration"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

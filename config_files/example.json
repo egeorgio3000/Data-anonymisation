@@ -1,0 +1,87 @@
+{
+  "tables": [
+    {
+      "caching": "cache",
+      "name": "users",
+      "target_id": "3",
+      "columns": [
+        {
+          "name": "nom",
+          "type": "lastname"
+        },
+        {
+          "name": "prenom",
+          "type": "firstname"
+        },
+        {
+          "name": "civilite",
+          "type": "civility"
+        },
+        {
+          "name": "img_url",
+          "type": "imgurl"
+        }
+      ],
+      "relations_tables": [
+        {
+          "type": "one_to_one",
+          "name": "contacts_info",
+          "columns": [
+            {
+              "name": "address",
+              "type": "address"
+            },
+            {
+              "name": "email",
+              "type": "email"
+            }
+          ]
+        },
+        {
+          "name": "factures",
+          "columns": [
+            {
+              "name": "facture_address",
+              "type": "address"
+            }
+          ],
+          "relations_tables": [
+            {
+              "name": "facture_details",
+              "columns": [
+                {
+                  "name": "img_url",
+                  "type": "imgurl"
+                }
+              ]
+            },
+            {
+              "type": "one_to_one",
+              "name": "facture_metadata",
+              "columns": [
+                {
+                  "name": "iban",
+                  "type": "iban"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "orders",
+          "relations_tables": [
+            {
+              "name": "products",
+              "columns": [
+                {
+                  "name": "img_url",
+                  "type": "imgurl"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

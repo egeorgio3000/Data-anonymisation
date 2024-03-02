@@ -1,0 +1,14 @@
+tables:
+  - name: users
+    columns:
+      - name: username
+        type: firstname
+        dependances:
+          - name: civilite
+            type: civility
+            value: 
+              male: "M"
+              female: "MME"
+              non-binary: "nb"
+      - name: email
+        type: email

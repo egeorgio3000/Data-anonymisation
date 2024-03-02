@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "caching": "reset",
+      "name": "users",
+      "id": "id_user",
+      "target_id": "5, 8, 9, 11:50, 40:80",
+      "columns": [
+        {
+          "name": "nom",
+          "type": "lastname"
+        },
+        {
+          "name": "prenom",
+          "type": "firstname"
+        },
+        {
+          "name": "civilite",
+          "type": "civility"
+        },
+        {
+          "name": "img_url",
+          "type": "imgurl"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "tables": [
+    {
+      "caching": "reset",
+      "name": "users",
+      "id": "id_user",
+      "target_id": "3",
+      "columns": [
+        {
+          "name": "nom",
+          "type": "lastname"
+        },
+        {
+          "name": "prenom",
+          "type": "firstname"
+        },
+        {
+          "name": "civilite",
+          "type": "civility"
+        },
+        {
+          "name": "img_url",
+          "type": "imgurl"
+        }
+      ],
+      "relations_tables": [
+        {
+          "type": "one_to_many",
+          "name": "orders",
+          "id": "id_order",
+          "relation_id": "id_user",
+          "parent_relation_id": "id_user",
+          "relations_tables": [
+            {
+              "type": "one_to_many",
+              "name": "products",
+              "id": "id_product",
+              "relation_id": "id_product",
+              "parent_relation_id": "id_product",
+              "columns": [
+                {
+                  "name": "img_url",
+                  "type": "imgurl"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

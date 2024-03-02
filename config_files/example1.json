@@ -1,0 +1,47 @@
+{
+  "tables": [
+    {
+      "caching": "reset",
+      "name": "users",
+      "id": "id_user",
+      "target_id": "1",
+      "columns": [
+        {
+          "name": "nom",
+          "type": "lastname"
+        },
+        {
+          "name": "prenom",
+          "type": "firstname"
+        },
+        {
+          "name": "civilite",
+          "type": "civility"
+        },
+        {
+          "name": "img_url",
+          "type": "imgurl"
+        }
+      ],
+      "relations_tables": [
+        {
+          "type": "one_to_one",
+          "name": "contacts_info",
+          "id": "id_contact_info",
+          "relation_id": "user_id",
+          "parent_relation_id": "id_user",
+          "columns": [
+            {
+              "name": "address",
+              "type": "address"
+            },
+            {
+              "name": "email",
+              "type": "email"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
